@@ -21,12 +21,12 @@ jobs:
         source_repo: cloud-custodian/cloud-custodian
         source_branch: master
         destination_branch: master
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.WORKFLOW_TOKEN }}
     - uses: repo-sync/pull-request@v2
       name: Create pull request
       with:
         source_branch: master
         destination_branch: stax-vendored-patches
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.WORKFLOW_TOKEN }}
         pr_title: "Update C7N to Master"
         pr_body: ":crown: :cloud: Magic!"
